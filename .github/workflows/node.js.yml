@@ -29,4 +29,5 @@ jobs:
     - run: npm run build --if-present
     - run: ls -a
     - run: echo "VERSION=$(cat .version)"
-    - run: echo "$VERSION"
+    - run: docker build . -t revisionsystems/ci-cd:$VERSION
+    - run: docker publish -t revisionsystems/ci-cd:$VERSION
