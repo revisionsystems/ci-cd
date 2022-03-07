@@ -1,0 +1,20 @@
+{
+  "name": "@revisionsystems/ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ci.js",
+  "scripts": {
+    "test": "echo Testing...",
+    "build": "node ci.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revisionsystems/ci-cd.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revisionsystems/ci-cd/issues"
+  },
+  "homepage": "https://github.com/revisionsystems/ci-cd#readme"
+}
