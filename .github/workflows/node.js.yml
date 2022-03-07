@@ -27,12 +27,11 @@ jobs:
     - run: npm i
     - run: npm test
     - run: npm run build --if-present
-    - run: echo "${{ secrets.DOCKER_USERNAME }}"
     -
       name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
-    - run: docker build . -t "revisionsystems/ci-cd:$(cat .version)"
+    - run: docker build . -t "revisionsystems/ci-cd:latest" -t "revisionsystems/ci-cd:$(cat .version)"
     - run: docker push "revisionsystems/ci-cd:$(cat .version)"
