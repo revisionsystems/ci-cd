@@ -28,5 +28,5 @@ jobs:
     - run: npm test
     - run: npm run build --if-present
     - run: ls -a
-    - run: VERSION=$(cat .version)
-    - run: echo "$VERSION"
+    - run: echo "VERSION=$(cat .version)"
+    - run: echo $VERSION
