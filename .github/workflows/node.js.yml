@@ -31,7 +31,7 @@ jobs:
       name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
-        username: revisionsystems
+        username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
     - run: docker build . -t "revisionsystems/ci-cd:$(cat .version)"
     - run: docker publish "revisionsystems/ci-cd:$(cat .version)"
