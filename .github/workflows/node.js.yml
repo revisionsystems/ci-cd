@@ -27,6 +27,6 @@ jobs:
     - run: npm i
     - run: npm test
     - run: npm run build --if-present
-    - run: docker login --username revisionsystems --password "$DOCKER_TOKEN"
+    - run: docker login --username revisionsystems --password ${{ secrets.DOCKER_TOKEN }}
     - run: docker build . -t "revisionsystems/ci-cd:$(cat .version)"
     - run: docker publish "revisionsystems/ci-cd:$(cat .version)"
