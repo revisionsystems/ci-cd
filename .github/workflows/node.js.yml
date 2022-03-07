@@ -34,4 +34,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_TOKEN }}
     - run: docker build . -t "revisionsystems/ci-cd:latest" -t "revisionsystems/ci-cd:$(cat .version)"
-    - run: docker push "revisionsystems/ci-cd:$(cat .version)"
+    - run: docker push "revisionsystems/ci-cd"
